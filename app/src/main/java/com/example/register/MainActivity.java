@@ -50,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
         showButton =  findViewById(R.id.showButton);
         result =  findViewById(R.id.Text);
 
-        requestQueue = Volley.newRequestQueue(getApplicationContext());
+        //requestQueue = Volley.newRequestQueue(getApplicationContext());
+
+        //登録したデータをアプリに表示する
 
         showButton.setOnClickListener(new View.OnClickListener(){
 
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        //MYSQL にデータを登録するコードは以下のように
 
         RegButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,7 +158,3 @@ public class MainActivity extends AppCompatActivity {
                 requestQueue.add(stringRequest);
             }
         }
-
-
-//}
-   // }
