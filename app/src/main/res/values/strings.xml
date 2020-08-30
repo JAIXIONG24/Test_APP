@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Register</string>
+    <string name="show">Show</string>
+    <string name="register">Register</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="username">username</string>
+</resources>
