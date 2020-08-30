@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
     }
 
     private void Registration() {
@@ -117,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, insertUrl, new Response.Listener<String>() {
             public void onResponse(String response) {
+
                 try{
                     JSONObject jsonObject = new JSONObject(response);
                     String success = jsonObject.getString("success");
@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,"Register Success!", Toast.LENGTH_SHORT).show();
 
                     }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(MainActivity.this,"Register Error!" + e.toString(),  Toast.LENGTH_SHORT).show();
@@ -136,7 +137,9 @@ public class MainActivity extends AppCompatActivity {
 
                 System.out.println(response.toString());
             }
+
         }, new Response.ErrorListener() {
+            
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(MainActivity.this,"Register Error!" + error.toString(),  Toast.LENGTH_SHORT).show();
