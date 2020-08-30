@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         //requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        //登録したデータをアプリに表示する
+        //登録したデータをアプリに表示するは以下のコードである
 
         showButton.setOnClickListener(new View.OnClickListener(){
 
@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         //MYSQL にデータを登録するコードは以下のように
 
         RegButton.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     private void Registration() {
         loading.setVisibility(View.VISIBLE);
         RegButton.setVisibility(View.GONE);
@@ -143,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         })
+
         {
             @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
